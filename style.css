@@ -1,0 +1,332 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+:root {
+    --color-primary: #d63384;
+    --color-primary-dark: #a61e66;
+    --color-purple: #7b2cbf;
+    --color-purple-dark: #552080;
+    --color-background: #fff0f7;
+    --color-surface: #ffffff;
+    --color-lavender: #f1e4ff;
+    --color-heading: #4a145f;
+    --color-text: #684b70;
+    --color-border: #f0c9e2;
+    --color-footer: #4a145f;
+
+    --font-family: Arial, Helvetica, sans-serif;
+    --font-size-small: 0.875rem;
+    --font-size-base: 1rem;
+    --font-size-large: 1.25rem;
+    --font-size-heading: 2rem;
+
+    --spacing-small: 1rem;
+    --spacing-medium: 2rem;
+    --spacing-large: 4rem;
+
+    --border-radius: 16px;
+    --container-width: 1100px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-family);
+    font-size: var(--font-size-base);
+    line-height: 1.7;
+    color: var(--color-text);
+    background: linear-gradient(135deg, #fff0f7, #f5edff);
+    min-height: 100vh;
+}
+
+h1,
+h2,
+h3 {
+    color: var(--color-heading);
+    line-height: 1.3;
+}
+
+h1 {
+    font-size: var(--font-size-heading);
+    margin-bottom: var(--spacing-small);
+}
+
+h2 {
+    font-size: 1.75rem;
+    margin-bottom: var(--spacing-small);
+}
+
+p {
+    margin-bottom: var(--spacing-small);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: color 0.25s ease, background-color 0.25s ease;
+}
+
+a:hover {
+    color: var(--color-purple);
+    text-decoration: underline;
+}
+
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid var(--color-purple);
+    outline-offset: 4px;
+}
+
+.site-header {
+    background: linear-gradient(90deg, #f8c8e0, #e8d5ff);
+    border-bottom: 2px solid var(--color-border);
+}
+
+.navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.logo {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: var(--color-purple-dark);
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.25rem;
+    list-style: none;
+}
+
+.nav-links a {
+    color: var(--color-purple-dark);
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: var(--color-primary-dark);
+}
+
+
+.container {
+    width: 100%;
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+
+.about-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.about-content {
+    width: 100%;
+}
+
+.eyebrow {
+    color: var(--color-primary);
+    font-size: var(--font-size-small);
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.about-content h1 span {
+    color: var(--color-primary);
+}
+
+.intro {
+    font-size: var(--font-size-large);
+    max-width: 600px;
+}
+
+.profile-image {
+    width: 100%;
+    max-width: 300px;
+}
+
+.profile-image img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 7px solid #ffffff;
+    box-shadow: 0 0 0 5px #e8b4d5, 0 12px 30px rgba(123, 44, 191, 0.2);
+}
+
+
+.button {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    color: #ffffff;
+    background: linear-gradient(135deg, #d63384, #7b2cbf);
+    border: 2px solid transparent;
+    border-radius: 999px;
+    font-weight: bold;
+    box-shadow: 0 6px 18px rgba(214, 51, 132, 0.22);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.button:hover {
+    color: #ffffff;
+    text-decoration: none;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 22px rgba(123, 44, 191, 0.28);
+}
+
+
+.hobbies-section {
+    background: linear-gradient(135deg, #ffffff, #f7eaff);
+    padding: 2rem 1.5rem;
+    margin: 2rem 0;
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    box-shadow: 0 8px 24px rgba(123, 44, 191, 0.08);
+}
+
+.hobbies-list {
+    list-style: none;
+    margin: 1.5rem 0;
+}
+
+.hobbies-list li {
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.65rem;
+    background-color: #fff0f7;
+    border: 1px solid #f4d1e5;
+    border-radius: 10px;
+}
+
+.hobbies-list li::before {
+    content: "✦";
+    color: var(--color-purple);
+    margin-right: 0.75rem;
+}
+
+.favorite-website {
+    margin-top: 1.5rem;
+}
+
+
+.contact-section {
+    background-color: #f1e4ff;
+    padding: 2rem 1.5rem;
+    margin: 2rem 0;
+    border-radius: var(--border-radius);
+    border-left: 5px solid var(--color-primary);
+}
+
+.contact-section a {
+    color: var(--color-purple-dark);
+    font-weight: bold;
+    overflow-wrap: anywhere;
+}
+
+
+.site-footer {
+    text-align: center;
+    background: linear-gradient(90deg, #7b2cbf, #a61e66);
+    color: #ffffff;
+    padding: 1.5rem 1rem;
+}
+
+.site-footer p {
+    margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+    :root {
+        --font-size-heading: 2.75rem;
+    }
+
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .about-section {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 3rem;
+        padding: 4rem 0;
+    }
+
+    .about-content {
+        flex: 1;
+    }
+
+    .profile-image {
+        width: 40%;
+        max-width: 350px;
+    }
+
+    .container {
+        padding: 3rem 2rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .about-section {
+        gap: 5rem;
+    }
+
+    .hobbies-section {
+        padding: 3rem;
+    }
+
+    .intro {
+        font-size: 1.25rem;
+    }
+}
+
+@media (min-width: 1440px) {
+    .container {
+        max-width: 1200px;
+    }
+}
+
+/* Navigation using Flexbox */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
